@@ -94,9 +94,6 @@ add_custom_target(add-copyright
   COMMENT "Add copyright")
 
 if(MSVC)
-  option(SHADERC_ENABLE_SHARED_CRT
-          "Use the shared CRT instead of the static CRT"
-          ${SHADERC_ENABLE_SHARED_CRT})
   if (NOT SHADERC_ENABLE_SHARED_CRT)
     # Link executables statically by replacing /MD with /MT everywhere.
     foreach(flag_var
